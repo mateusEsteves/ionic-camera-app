@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Camera App
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card style="height:100%">
+    <ion-card-title style="font-size:1.7rem; text-align:center;">
+      {{ titulo }}
+    </ion-card-title>
+    <ion-card-content>
+      <img [src]="img_base64" *ngIf="img_base64"/>
+    </ion-card-content>
+  </ion-card>
+  <ion-fab bottom right>
+    <button ion-fab (click)="addPicture()">
+      <ion-icon name="camera"></ion-icon>
+    </button>
+  </ion-fab>  
+</ion-content>
